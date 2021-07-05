@@ -23,4 +23,8 @@ void main() {
       expect(overTheRoad(7, 11), equals(16));
     });
   });
+
+  test('street lengh = 500000000 => 1 is opposite 1000000000', () {
+    expect(overTheRoad(1, 500000000), equals(1000000000));
+  });
 }
