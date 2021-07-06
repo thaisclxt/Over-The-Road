@@ -1,3 +1,5 @@
+@Timeout(Duration(seconds: 12))
+
 import 'package:road/road.dart';
 import 'package:test/test.dart';
 
@@ -24,7 +26,11 @@ void main() {
     });
   });
 
-  test('street lengh = 500000000 => 1 is opposite 1000000000', () {
+  test('memory test', () {
     expect(overTheRoad(1, 500000000), equals(1000000000));
+  });
+
+  test('wrong value', () {
+    expect(overTheRoad(7, 11), equals(2));
   });
 }
